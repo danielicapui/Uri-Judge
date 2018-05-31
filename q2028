@@ -1,0 +1,19 @@
+def sofs():
+  caso = 0
+  while True: #condicional enquanto
+      try:
+          x = int(input())
+      except EOFError:
+          break #termina
+      caso = caso+1
+      lista_numero = ["0"] 
+     #condicional para analasar a variável x
+     if x == 0: 
+          print("Caso {}: 1 numero\n0".format(caso))
+      else:
+          for i in range(x + 1):
+              for j in range(i):  # range para coloca os números dentro da lista, eles se repetem de acordo com seu valor numérico
+                  lista_numero.append(str(i)) #função append que coloca a stringer i  na lista
+                  # a conversão para str para poder usar a função  .join( outro meio)
+          print("Caso {}: {} numeros\n{}".format(caso, len(lista_numero), " ".join(lista_numero))) #len mostra o tamanho da lista e format coloca quantas casas depois da virgula queremos
+      print()
