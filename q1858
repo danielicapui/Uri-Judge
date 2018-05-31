@@ -1,0 +1,3 @@
+def theona(inutil):
+  data = list(map(int, input().split()))
+  print(data.index(min(data)) + 1)  # +1 para o  index() já que conta a posição a partir do 0
